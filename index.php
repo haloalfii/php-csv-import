@@ -31,7 +31,8 @@
         <table id="tables" class="table mt-5">
             <thead>
                 <tr>
-                    <th>Id</th>
+
+                    <th>Number</th>
                     <th>Product Id</th>
                     <th>User</th>
                     <th>Riview</th>
@@ -46,11 +47,12 @@
                 while ($row = mysqli_fetch_array($result)) {
                 ?>
                     <tr>
-                        <td><?php echo $row['id']; ?></td>
+                        <td><?php echo $row['number']; ?></td>
                         <td><?php echo $row['product_id']; ?></td>
                         <td><?php echo $row['user']; ?></td>
                         <td><?php echo $row['riview']; ?></td>
                         <td><?php echo $row['compound']; ?></td>
+
                     </tr>
                 <?php
                 } ?>
