@@ -32,27 +32,25 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Created</th>
+                    <th>Product Id</th>
+                    <th>User</th>
+                    <th>Riview</th>
+                    <th>Compound</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
                 include('connection.php');
-                $sql = 'SELECT * FROM users ORDER BY id desc';
+                $sql = 'SELECT * FROM compound ORDER BY id desc';
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_array($result)) {
                 ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['first_name']; ?></td>
-                        <td><?php echo $row['last_name']; ?></td>
-                        <td><?php echo $row['email']; ?></td>
-                        <td><?php echo $row['phone']; ?></td>
-                        <td><?php echo $row['created']; ?></td>
+                        <td><?php echo $row['product_id']; ?></td>
+                        <td><?php echo $row['user']; ?></td>
+                        <td><?php echo $row['riview']; ?></td>
+                        <td><?php echo $row['compound']; ?></td>
                     </tr>
                 <?php
                 } ?>
