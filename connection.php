@@ -2,7 +2,7 @@
 $dbhost = 'localhost';
 $dbuser = 'admin';
 $dbpass = 'Night';
-$dbname = 'import_csv';
+$dbname = 'compound_db';
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if (!$conn) {
