@@ -26,6 +26,7 @@
             <div>
                 <a class="btn btn-danger" href="export.php">Export</a>
                 <button class="btn btn-primary d-inline" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Import</button>
+                <a href="process.php" class="btn btn-warning d-inline text-white">Processing</a>
             </div>
         </div>
         <table id="tables" class="table mt-5">
@@ -42,6 +43,8 @@
             <tbody>
                 <?php
                 include('connection.php');
+                require_once 'vander.php';
+
                 $sql = 'SELECT * FROM compound ORDER BY id desc';
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_array($result)) {
@@ -51,8 +54,7 @@
                         <td><?php echo $row['product_id']; ?></td>
                         <td><?php echo $row['user']; ?></td>
                         <td><?php echo $row['riview']; ?></td>
-                        <td><?php echo $row['compound']; ?></td>
-
+                        <td><?php echo $row['compound'] ?></td>
                     </tr>
                 <?php
                 } ?>
